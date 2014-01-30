@@ -5,7 +5,7 @@ The code ingredients:
 
 
 
-## Make setting up the overall environment part of your code, and version accordingly.
+## Installing and configuring the the environment is automated in the code, rather than a manual process run by a systems group.
 
 A key idea (maybe *the* key idea) of devops is that the environment in which your code will run should be modeled as code, and not be some separate thing that is a black box.  (And, as we get a bit further down the stack, should be versioned with the code, as well.)  It seems pretty basic, but the idea is that you should have a "recipe" that allows you to recreate the environment at any moment.  Some of the key parts of managing the environment include:
 
@@ -22,7 +22,7 @@ Some examples of tools to include here:
 * dockerfile
 
 
-## Develop on a local development environment that matches production as closely as possible.
+## A local development environment that closely matches production.
 
 One of the key breakthroughs of the devops idea is giving developers a simple way to install and run the entire app on their local machine.  Being able to run it on their own system encourages creativity and flexibility, and make development much more fun and productive.  
 
@@ -36,7 +36,7 @@ Something about mocking up 3rd party services (APIs, etc) on a local machine:
 
 * [canned](https://github.com/sideshowcoder/canned)
 
-## Use a distributed version control system (probably git) that can hooks to external services.
+## Code is stored in a distributed version control system (probably git) with hooks to external services.
 
 The version control system is the heart of the new development process.  At the most basic level, a VCS allows developers to keep track of all the changes made to a set of files and be able to roll back to specific points in time in case something screws up.  In some systems, like [Subversion](http://subversion.apache.org/), the code is checked out and then checked back in from a central repository. If there is a conflict between two developers' files (for example, both of them edited the same line of code), then the two version must be merged together.  This can be a painful process. 
 
@@ -44,10 +44,10 @@ In contrast, distributed version control systems (DVCS), like [git](http://git-s
 
 While there are many different work styles, such as [git flow](http://nvie.com/posts/a-successful-git-branching-model/), the basic DVCS process is:
 
-* there is an agreed upon master repository, which is often on a service like [GitHub](https://github.com/), [BitBuckt](https://bitbucket.org/), or [GitLab](https://www.gitlab.com/)
+* there is an agreed upon master repository, which is often on a public service like [GitHub](https://github.com/), [BitBuckt](https://bitbucket.org/) or an internal server like [GitLab](https://www.gitlab.com/) or [Mercurial](http://mercurial.selenic.com/)
 * each developer clones the master repository to his or her local machine
 * the developer creates a new branch, usually for a specific feature
-* the developer can make commits, but those are made only against their local copy
+* the developer makes commits against the local copy
 * once the feature is done, he or she merges the branch back into the master branch and pushes the change back to the master
 * other developers pull from the and merge their branch
 * the merged copy preserves the full version history of all the distributed copies
@@ -55,7 +55,7 @@ While there are many different work styles, such as [git flow](http://nvie.com/p
 In addition to these coordination functions, most version control system also offer a feature called a _hook_.  A hook is a process that fires once a specific event, like a commit, happens to the repository.  Hooks can be defined in the repo itself, but also in the hosting service.  For example, GitHub lets you define "service" hooks that are called whenever a specific event occurs.  These hooks are the tie-in to the continuous integration (CI server).
 
 
-## Use a continuous integration server that is triggers by changes in your codebase
+## Changes in the master branch of the codebase trigger a continuous integration server to deploys code or perform tests.
 
 The CI server's executes a specific action on a repository whenever it receives a commit hook.  For example, is a developer makes a commit against repository called foo, the CI server might:
 
@@ -68,15 +68,26 @@ The CI server's executes a specific action on a repository whenever it receives 
 Some key examples of CI servers include:
 
 
-  
-
 * Jenkins
 * Travis
 * others...
 
-## Production Environments
+## The cloud is the default deployment platform.
 
-## Monitoring
+
+
+## All servers and important system are instrumented and monitored from a central service.
+
+
+* Nagios
+* Scout
+
+* New Relic
+
+
+
+* Pagerduty
+
 
 * Chatops
 
