@@ -1,11 +1,9 @@
 # Ingredients for Success (What you should do and the tools you should consider)
 
 
-The code ingredients:
 
 
-
-## Installing and configuring the the environment is automated in the code, rather than a manual process run by a systems group.
+## Installing and configuring the environment is automated in the code, rather than a manual process run by a systems group.
 
 A key idea (maybe *the* key idea) of devops is that the environment in which your code will run should be modeled as code, and not be some separate thing that is a black box.  (And, as we get a bit further down the stack, should be versioned with the code, as well.)  It seems pretty basic, but the idea is that you should have a "recipe" that allows you to recreate the environment at any moment.  Some of the key parts of managing the environment include:
 
