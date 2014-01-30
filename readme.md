@@ -3,8 +3,6 @@
 DevOps tools are popping up like weeds -- nearly everyday, some new service or tool pops up.  The goal of this project is to (1) catalog all these developments, (2) put them into a useful framework, and (3) document how system development is changing and evolving as the lines between development and operations continues to blur.  
 
 
-
-
 ## Installing and configuring the environment is automated in the code, rather than a manual process run by a systems group.
 
 A key idea (maybe *the* key idea) of devops is that the environment in which your code will run should be modeled as code, and not be some separate thing that is a black box.  (And, as we get a bit further down the stack, should be versioned with the code, as well.)  It seems pretty basic, but the idea is that you should have a "recipe" that allows you to recreate the environment at any moment.  Some of the key parts of managing the environment include:
@@ -12,9 +10,6 @@ A key idea (maybe *the* key idea) of devops is that the environment in which you
 * *General configuration*.  General configuration includes setting up the basic requirements for the app to even run -- things like ensuring that whatever directory it will live in actually exists, creating the user a service will run as, specifying where log files should be stored, exposing (or blocking) the proper ports, setting any required permissions, installing any license or cert files, updating packages, and on and on.  In short, anything that an app needs at the basic operating system level.  
 * *Installation and configuration of the required backing services*.  The [12 Factor App](http://12factor.net) describes [backing services](http://12factor.net/backing-services) as "any service the app consumes over the network as part of its normal operation. Examples include datastores (such as MySQL or CouchDB), messaging/queueing systems (such as RabbitMQ or Beanstalkd), SMTP services for outbound email (such as Postfix), and caching systems (such as Memcached)."  Backing services can also include 3rd party services, like Amazon AWS (SQS, dynamodb etc),  [GitHub](http://developer.github.com/v3/), [Twitter](https://dev.twitter.com/), [Parse](https://www.parse.com/), and a host of other services.  Ideally, the "code for a twelve-factor app makes no distinction between local and third party services."
 * *Installation of the development environment itself*.  If you're writing a Rails app, for example, you'll need to have the required versions of Ruby, Rails, bundler, and anything else you need.  The same goes for any other stack.
-
-
-
 
 ## A local development environment that closely matches production.
 
@@ -52,13 +47,6 @@ The CI server's executes a specific action on a repository whenever it receives 
 * if the test suite passes, the CI server might deploy the code to a staging or even production server
 
 
-Some key examples of CI servers include:
-
-
-* Jenkins
-* Travis
-* others...
-
 ## The cloud is the default deployment platform.
 
 
@@ -66,17 +54,7 @@ Some key examples of CI servers include:
 ## All servers and important system are instrumented and monitored from a central service.
 
 
-* Nagios
-* Scout
 
-* New Relic
-
-
-
-* Pagerduty
-
-
-* Chatops
 
 
 
