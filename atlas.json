@@ -1,9 +1,6 @@
 {
   "files": [
-    "readme.md",
-    "manage-environment.md",
-    "codebase.md",
-    "application_stacks.html"
+    "readme.md"
   ],
   "formats": {
     "pdf": {
