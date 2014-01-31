@@ -26,8 +26,8 @@
         "js/main.js"
       ],
       "stylesheets": [
-          "css/main.css",
-          "css/normalize.min.css"
+          "theme/html/css/main.css",
+          "theme/html/css/normalize.min.css"
       ]
     }
   },
