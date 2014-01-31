@@ -1,6 +1,7 @@
 {
   "files": [
-    "outline.md"
+    "manage-environment.md",
+    "application_stacks.html"
   ],
   "formats": {
     "pdf": {
@@ -26,8 +27,8 @@
         "js/main.js"
       ],
       "stylesheets": [
-          "theme/html/css/main.css",
-          "theme/html/css/normalize.min.css"
+        "theme/html/css/main.css",
+        "theme/html/css/normalize.min.css"
       ]
     }
   },
