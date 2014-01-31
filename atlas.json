@@ -22,7 +22,12 @@
       "toc": false,
       "consolidated": true,
       "javascripts": [
-        "js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"
+        "js/vendor/modernizr-2.6.2-respond-1.1.0.min.js",
+        "js/main.js"
+      ],
+      "stylesheets": [
+          "css/main.css",
+          "css/normalize.min.css"
       ]
     }
   },
