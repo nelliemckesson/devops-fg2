@@ -16,7 +16,6 @@ One of the key breakthroughs of the devops idea is giving developers a simple wa
 
 [Vagrant](http://www.vagrantup.com/) is the key tool here -- basically, it takes the recipes you created with your environment tool (i.e., your chef or puppet files) and _provisions_ (creates) a virtual machine that runs in a tool like [Virtualbox](https://www.virtualbox.org/) or [VMWare](http://www.vmware.com/).  Vagrant automatically maps a virtual drive from the virtual instance back to the host machine, allowing the developer to use his or her favorite editor / IDE, but still run the application in an environment that matches the production environment as closely as possible.
 
-
 ## Code is stored in a distributed version control system (probably git) with hooks to external services.
 
 The version control system is the heart of the new development process.  At the most basic level, a VCS allows developers to keep track of all the changes made to a set of files and be able to roll back to specific points in time in case something screws up.  In some systems, like [Subversion](http://subversion.apache.org/), the code is checked out and then checked back in from a central repository. If there is a conflict between two developers' files (for example, both of them edited the same line of code), then the two version must be merged together.  This can be a painful process. 
