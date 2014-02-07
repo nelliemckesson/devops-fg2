@@ -2,7 +2,6 @@
 
 DevOps tools are popping up like weeds -- nearly everyday, some new service or tool pops up.  The goal of this project is to (1) catalog all these developments, (2) put them into a useful framework, and (3) document how system development is changing and evolving as the lines between development and operations continues to blur.  
 
-
 ## Installing and configuring the environment is automated in the code, rather than a manual process run by a systems group.
 
 A key idea (maybe *the* key idea) of devops is that the environment in which your code will run should be modeled as code, and not be some separate thing that is a black box.  (And, as we get a bit further down the stack, should be versioned with the code, as well.)  It seems pretty basic, but the idea is that you should have a "recipe" that allows you to recreate the environment at any moment.  Some of the key parts of managing the environment include:
