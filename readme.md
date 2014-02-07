@@ -64,11 +64,3 @@ The CI server's executes a specific action on a repository whenever it receives 
 * execute foo's test suites (see the section on application stacks for more about this)
 * if the tests fail, the CI server sends an alert to the development team and halts the process
 * if the test suite passes, the CI server might deploy the code to a staging or even production server
-
-
-
-
-
-
-
-
