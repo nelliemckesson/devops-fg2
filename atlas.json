@@ -1,11 +1,10 @@
 {
   "files": [
-    "readme.md",
     "application_stacks.html"
   ],
   "formats": {
     "pdf": {
-      "version": false,
+      "version": "web",
       "index": false,
       "toc": false
     },
