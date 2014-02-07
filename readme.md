@@ -53,6 +53,20 @@ The CI server's executes a specific action on a repository whenever it receives 
 
 ## All servers and important system are instrumented and monitored from a central service.
 
+The CI server's executes a specific action on a repository whenever it receives a commit hook.  For example, is a developer makes a commit against repository called foo, the CI server might:
+
+* clone down a local copy of foo
+* execute foo's test suites (see the section on application stacks for more about this)
+* if the tests fail, the CI server sends an alert to the development team and halts the process
+* if the test suite passes, the CI server might deploy the code to a staging or even production server
+* 
+The CI server's executes a specific action on a repository whenever it receives a commit hook.  For example, is a developer makes a commit against repository called foo, the CI server might:
+
+* clone down a local copy of foo
+* execute foo's test suites (see the section on application stacks for more about this)
+* if the tests fail, the CI server sends an alert to the development team and halts the process
+* if the test suite passes, the CI server might deploy the code to a staging or even production server
+
 
 
 
